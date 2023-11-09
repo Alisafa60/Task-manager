@@ -16,9 +16,9 @@ taskForm.addEventListener("submit", function(e) {
         const taskItem = document.createElement('li');
         taskItem.classList.add("task-item"); 
         taskItem.innerHTML = `
-        <div class="task-name">${taskName}</div>
-        <div class="task-date">Due Date: ${dueDate}</div>
-        <div class="task-priority">Priority: ${priority}</div>
+        <div class="task-name"><span>${taskName}<span></div>
+        <div class="task-date"><span>Due Date: ${dueDate}<span></div>
+        <div class="task-priority"><span>Priority: ${priority}<span></div>
         <button class="edit-button">Edit</button>
         <button class="completed-button">Completed</button>
         <button class="delete-button">Delete</button>
@@ -50,8 +50,8 @@ taskList.addEventListener("click", function (e) {
 
 // Function to edit a task 
 function editTask(taskItem, taskText) {
-    const taskTextDiv = taskItem.querySelector("span");
-    taskTextDiv.style.display = "none";
+    const taskTextSpan = taskItem.querySelector("span");
+    taskTextSpan.style.display = "none";
 
     const editInput = document.createElement("input");
     editInput.type = "text";
@@ -65,8 +65,8 @@ function editTask(taskItem, taskText) {
     saveButton.addEventListener("click", function () {
         const editedText = editInput.value;
         if (editedText.trim() !== "") {
-            taskTextDiv.innerText = editedText;
-            taskTextDiv.style.display = "inline";
+            taskTextSpan.innerText = editedText;
+            taskTextSpan.style.display = "inline";
             editInput.remove();
             saveButton.remove();
         }
