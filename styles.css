@@ -1,0 +1,19 @@
+.task-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+}
+
+.task-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.task-date, .task-priority {
+    margin-bottom: 5px;
+}
+
+.completed {
+    background-color: #c0f0c0;
+}
