@@ -5,13 +5,13 @@
         <Title>Task Manager</Title>
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body>
+    <body id="pageContainer">
         <!--Adding task manager bar and buttons-->
         <h1>Task Manager</h1>
         <form id="taskForm"> 
-            <input type="text" id="taskName" placeholder="Enter a task..."> <!-- Update the input's ID to "taskName" -->
-            <input type="date" id="dueDate"> <!-- Update the input's ID to "dueDate" -->
-            <select id="priority"> <!-- Update the select's ID to "priority" -->
+            <input type="text" id="taskName" placeholder="Enter a task..."> 
+            <input type="date" id="dueDate"> 
+            <select id="priority">
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
                 <option value="high">High</option>
@@ -19,7 +19,7 @@
             <button id="add-button">Add</button>
         </form>
     
-        <ul id="task-list">
+        <ul id="taskList">
             <!-- Tasks will be added here using JavaScript -->
         </ul>
     

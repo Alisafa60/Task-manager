@@ -1,6 +1,6 @@
 //basic task managment
 const taskForm = document.getElementById("taskForm");
-const taskList = document.getElementById("task-list");
+const taskList = document.getElementById("taskList");
 const taskNameInput = document.getElementById("taskName");
 const dueDateInput = document.getElementById("dueDate");
 const priorityInput = document.getElementById("priority");
@@ -50,8 +50,8 @@ taskList.addEventListener("click", function (e) {
 
 // Function to edit a task 
 function editTask(taskItem, taskText) {
-    const taskTextSpan = taskItem.querySelector("span");
-    taskTextSpan.style.display = "none";
+    const taskTextDiv = taskItem.querySelector("span");
+    taskTextDiv.style.display = "none";
 
     const editInput = document.createElement("input");
     editInput.type = "text";
@@ -65,20 +65,11 @@ function editTask(taskItem, taskText) {
     saveButton.addEventListener("click", function () {
         const editedText = editInput.value;
         if (editedText.trim() !== "") {
-            taskTextSpan.innerText = editedText;
-            taskTextSpan.style.display = "inline";
+            taskTextDiv.innerText = editedText;
+            taskTextDiv.style.display = "inline";
             editInput.remove();
             saveButton.remove();
         }
     });
     
 }
-
-
-
-
-
-
-
-
-    
