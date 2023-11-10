@@ -62,6 +62,7 @@ taskList.addEventListener("click", function (e) {
     }
 });
 
+    //moving completed task to separate table
 function moveCompletedTask(taskItem) {
     const taskText = taskItem.querySelector(".task-name").innerText;
     const completedTaskItem = document.createElement('li');
@@ -90,7 +91,7 @@ completedTaskContainer.addEventListener("click", function (e) {
 
 function restoreCompletedTask(completedTaskItem, taskText) {
     const taskItem = document.createElement('li');
-    taskItem.classList.add("task-item", "completed"); // Add the "completed" class
+    taskItem.classList.add("task-item");
     taskItem.innerHTML = `
         <div class="task-item-container">
             <span class="task-item-1 task-name">${taskText}</span>
@@ -131,7 +132,7 @@ function editTask(taskItem, taskText) {
     
 }
 
-
+    //background image
 document.addEventListener("DOMContentLoaded", function () {
     const body = document.body;
     const imagePath = "./Assets/images/background.jpg";

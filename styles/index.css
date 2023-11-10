@@ -6,6 +6,7 @@ body {
     width: 100vw;
     min-height: 100vh;
     font-family: 'Rubik', sans-serif;
+    color: rgb(18, 15, 22);
     background: linear-gradient(to right, 
         rgb(255, 105, 98),
         rgb(119, 221, 120),
@@ -15,88 +16,13 @@ body {
     );
 }
 
+/* container for my user inputs */
 #taskContainer {
     display: flex;
     flex-direction: column;
 }
 
-.task-manager {
-    display: flex;
-}
-
-
-.task-list-container, .completed-tasks-container {
-    flex: 1;
-    padding: 20px;
-    background-color: rgb(202, 185, 227);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px 70px; 
-    min-width:300px;
-    min-height:300px;
-}
-
-.completed-tasks-container {
-    background-color: rgb(255, 105, 98);
-
-}
-
-.completed-tasks-container h2{
-    color: rgb(202, 185, 227);
-}
-
-.task-list-container h2{
-    color: rgb(255, 105, 98);
-}
-
-#taskList {
-    list-style-type: none;
-}
-
-.task-list-container {
-    flex: 1;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.task-item {
-    font-size: 15px;
-    line-height: 25px;
-    font-weight: 500;
-    width: 100%;
-    padding: 10px;
-    text-decoration: none;
-} 
-
-.edit-button, .completed-button, .delete-button {
-    padding: 10px 16px; 
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px; 
-    background-color: white;
-    color: #fff;
-}
-
-.edit-button i, .completed-button i, .delete-button i {
-    font-size: 14px;
-}
-
-.edit-button:hover, .completed-button:hover, .delete-button:hover {
-    background-color: rgb(202, 185, 227);
-}
-
-.completed{
-    text-decoration: line-through;
-    text-decoration-color: rgb(255, 105, 98);
-}
-
-h1{
-    display: flex;
-    justify-content: center;
-}
-
+/* user inputs */
 #taskForm {
     display: flex;
     flex-direction: column;
@@ -133,3 +59,87 @@ h1{
 #addButton:hover {
     background-color: rgb(119, 221, 120); 
 }
+
+.task-name{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.task-manager {
+    display: flex;
+}
+
+/* container for task output */
+.task-list-container, .completed-tasks-container {
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(202, 185, 227);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    margin: 20px 70px; 
+    min-width:300px;
+    min-height:300px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+
+.completed-tasks-container{
+    background-color: rgb(255, 105, 98);
+}
+    
+.completed-tasks-container :not(h2) {
+    text-decoration: line-through;
+}
+
+
+.task-item-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#taskList, #completedTaskList {
+    list-style-type: none;
+}
+
+/* output text */
+.task-list-container {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
+}
+
+/* output text */
+.task-item {
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 500;
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+} 
+
+.edit-button, .completed-button, .delete-button {
+    padding: 10px 16px; 
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px; 
+    background-color: white;
+    color: #fff;
+}
+
+/* icons */
+.edit-button i, .completed-button i, .delete-button i {
+    font-size: 14px;
+}
+
+.edit-button:hover, .completed-button:hover, .delete-button:hover {
+    background-color: rgb(202, 185, 227);
+}
+
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
