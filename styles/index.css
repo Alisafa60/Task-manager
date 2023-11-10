@@ -1,89 +1,73 @@
 body {
     display: flex;
-    flex-direction: center;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
     overflow-y: scroll;
     overflow-x: hidden;
     width: 100vw;
-    min-height: 100vh; 
+    min-height: 100vh;
     font-family: 'Rubik', sans-serif;
+    background: linear-gradient(to right, 
+        rgb(255, 105, 98),
+        rgb(119, 221, 120),
+        rgb(171, 236, 184),
+        rgb(202, 185, 227),
+        rgb(177, 156, 216),
+    );
 }
 
-/* #backgroundImage {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    object-fit: cover;
-} */
+#taskContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-manager {
+    display: flex;
+}
+
+
+.task-list-container, .completed-tasks-container {
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(202, 185, 227);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 70px; 
+    min-width:300px;
+    min-height:300px;
+}
+
+.completed-tasks-container {
+    background-color: rgb(255, 105, 98);
+
+}
+
+.completed-tasks-container h2{
+    color: rgb(202, 185, 227);
+}
+
+.task-list-container h2{
+    color: rgb(255, 105, 98);
+}
 
 #taskList {
     list-style-type: none;
 }
 
-#taskContainer {
-    display: flex;
-    max-width: 1000px;
-    width: 100%;
-    flex-direction: column;
-}
-
-#taskForm {
-    flex: 1;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.header-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px;
-    font-weight: bold;
-    background-color: rgb(255, 105, 98);
-    padding-right: 140px;
-}
-
 .task-list-container {
     flex: 1;
     padding: 20px;
-    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .task-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 500;
     width: 100%;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
-    background-color: rgb(202, 185, 227);
+    text-decoration: none;
 } 
-
-.task-item-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
-    
-}
-
-.task-item-1 {
-    flex: 1;
-    margin: 5px; 
-}
-
-.completed {
-    background-color: rgb(171, 236, 184);
-    text-decoration: line-through;
-    text-decoration-color: rgb(119, 221, 120) ;
-
-}
 
 .edit-button, .completed-button, .delete-button {
     padding: 10px 16px; 
@@ -96,9 +80,56 @@ body {
 }
 
 .edit-button i, .completed-button i, .delete-button i {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .edit-button:hover, .completed-button:hover, .delete-button:hover {
     background-color: rgb(202, 185, 227);
+}
+
+.completed{
+    text-decoration: line-through;
+    text-decoration-color: rgb(255, 105, 98);
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+#taskForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#taskName,
+#dueDate,
+#priority {
+    margin: 5px 0;
+    padding: 8px;
+    font-size: 16px;
+    background-color: rgb(171, 236, 184);
+    border-radius: 10px;
+    width: 200px;
+}
+#taskName{
+    margin-top: 30px;
+}
+
+#addButton {
+    background-color: rgb(171, 236, 184); 
+    color: white; 
+    padding: 10px 20px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px; 
+    margin-bottom: 30px;
+}
+
+#addButton:hover {
+    background-color: rgb(119, 221, 120); 
 }

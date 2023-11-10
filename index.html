@@ -15,14 +15,11 @@
         <title>Task Manager</title>
     </head>
     <body>
-        <!--Adding task manager bar and buttons-->
-        
-        <!-- <div id="backgroundImage"></div> -->
         <div id="taskContainer">
             <h1>Task Manager</h1>
-            <form id="taskForm"> 
-                <input type="text" id="taskName" placeholder="Enter a task..."> 
-                <input type="date" id="dueDate"> 
+            <form id="taskForm">
+                <input type="text" id="taskName" placeholder="Enter a task...">
+                <input type="date" id="dueDate">
                 <select id="priority">
                     <option value="low">Low</option>
                     <option value="medium">Medium</option>
@@ -30,22 +27,22 @@
                 </select>
                 <button id="addButton">Add</button>
             </form>
-            <div class="task-list-container">
-                <!-- Header Row -->
-                <div class="header-row">
-                    <span>Task Name</span>
-                    <span>Due Date</span>
-                    <span>Priority</span>
-                    <span>Actions</span>
+            <div class="task-manager">
+                <div class="task-list-container">
+                    <h2>To-do List</h2>
+                    <ul id="taskList">
+                        <!-- Tasks will be added here using JavaScript -->
+                    </ul>
                 </div>
-                
-                <!-- Task List -->
-                <ul id="taskList">
-                    <!-- Tasks will be added here using JavaScript -->
-                </ul>
+    
+                <div class="completed-tasks-container">
+                    <h2>Completed Tasks</h2>
+                    <ul id="completedTaskList">
+                        <!-- Completed tasks will be added here using JavaScript -->
+                    </ul>
+                </div>
             </div>
         </div>
-
         <script src="script.js"></script>
     </body>
     
