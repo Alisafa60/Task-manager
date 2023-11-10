@@ -2,28 +2,50 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <Title>Task Manager</Title>
+       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" 
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="./styles/index.css">
         <link rel="stylesheet" href="./styles/utilities.css">
+        <title>Task Manager</title>
     </head>
-    <body id="pageContainer">
+    <body>
         <!--Adding task manager bar and buttons-->
-        <h1>Task Manager</h1>
-        <form id="taskForm"> 
-            <input type="text" id="taskName" placeholder="Enter a task..."> 
-            <input type="date" id="dueDate"> 
-            <select id="priority">
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-            </select>
-            <button id="add-button">Add</button>
-        </form>
-    
-        <ul id="taskList">
-            <!-- Tasks will be added here using JavaScript -->
-        </ul>
-    
+        
+        <!-- <div id="backgroundImage"></div> -->
+        <div id="taskContainer">
+            <h1>Task Manager</h1>
+            <form id="taskForm"> 
+                <input type="text" id="taskName" placeholder="Enter a task..."> 
+                <input type="date" id="dueDate"> 
+                <select id="priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button id="addButton">Add</button>
+            </form>
+            <div class="task-list-container">
+                <!-- Header Row -->
+                <div class="header-row">
+                    <span>Task Name</span>
+                    <span>Due Date</span>
+                    <span>Priority</span>
+                    <span>Actions</span>
+                </div>
+                
+                <!-- Task List -->
+                <ul id="taskList">
+                    <!-- Tasks will be added here using JavaScript -->
+                </ul>
+            </div>
+        </div>
+
         <script src="script.js"></script>
     </body>
     

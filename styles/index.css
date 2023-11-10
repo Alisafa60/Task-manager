@@ -1,27 +1,104 @@
-.background-image{
-    position: absolute;
+body {
+    display: flex;
+    flex-direction: center;
+    justify-content: center; 
+    align-items: center; 
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100vw;
+    min-height: 100vh; 
+    font-family: 'Rubik', sans-serif;
+}
+
+/* #backgroundImage {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
-    width: 100%;
     object-fit: cover;
-    z-index: -1;
+} */
+
+#taskList {
+    list-style-type: none;
+}
+
+#taskContainer {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    flex-direction: column;
+}
+
+#taskForm {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    background-color: rgb(255, 105, 98);
+    padding-right: 140px;
+}
+
+.task-list-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .task-item {
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+    background-color: rgb(202, 185, 227);
+} 
+
+.task-item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    
 }
 
-.task-name {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.task-date, .task-priority {
-    margin-bottom: 5px;
+.task-item-1 {
+    flex: 1;
+    margin: 5px; 
 }
 
 .completed {
-    background-color: #c0f0c0;
+    background-color: rgb(171, 236, 184);
+    text-decoration: line-through;
+    text-decoration-color: rgb(119, 221, 120) ;
+
+}
+
+.edit-button, .completed-button, .delete-button {
+    padding: 10px 16px; 
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px; 
+    background-color: white;
+    color: #fff;
+}
+
+.edit-button i, .completed-button i, .delete-button i {
+    font-size: 18px;
+}
+
+.edit-button:hover, .completed-button:hover, .delete-button:hover {
+    background-color: rgb(202, 185, 227);
 }
