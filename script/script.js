@@ -79,6 +79,7 @@ function moveCompletedTask(taskItem) {
     taskItem.remove();
 }
 
+
 completedTaskContainer.addEventListener("click", function (e) {
     const target = e.target;
     if (target.classList.contains("restore-button")) {
@@ -88,6 +89,7 @@ completedTaskContainer.addEventListener("click", function (e) {
         restoreCompletedTask(completedTaskItem, taskText);
     }
 });
+
 
 function restoreCompletedTask(completedTaskItem, taskText) {
     const taskItem = document.createElement('li');

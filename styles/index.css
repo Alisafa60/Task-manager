@@ -15,13 +15,11 @@ body {
         rgb(177, 156, 216),
     );
 }
-
 /* container for my user inputs */
 #taskContainer {
     display: flex;
     flex-direction: column;
 }
-
 /* user inputs */
 #taskForm {
     display: flex;
@@ -68,7 +66,6 @@ body {
 .task-manager {
     display: flex;
 }
-
 /* container for task output */
 .task-list-container, .completed-tasks-container {
     flex: 1;
@@ -82,7 +79,6 @@ body {
     transition: box-shadow 0.3s ease-in-out;
 }
 
-
 .completed-tasks-container{
     background-color: rgb(255, 105, 98);
 }
@@ -91,7 +87,6 @@ body {
     text-decoration: line-through;
 }
 
-
 .task-item-container:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -99,7 +94,6 @@ body {
 #taskList, #completedTaskList {
     list-style-type: none;
 }
-
 /* output text */
 .task-list-container {
     padding: 20px;
@@ -107,7 +101,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
    
 }
-
 /* output text */
 .task-item {
     font-size: 15px;
@@ -127,7 +120,6 @@ body {
     background-color: white;
     color: #fff;
 }
-
 /* icons */
 .edit-button i, .completed-button i, .delete-button i {
     font-size: 14px;
@@ -136,7 +128,6 @@ body {
 .edit-button:hover, .completed-button:hover, .delete-button:hover {
     background-color: rgb(202, 185, 227);
 }
-
 
 h1{
     display: flex;
