@@ -58,35 +58,48 @@ body {
     background-color: rgb(119, 221, 120); 
 }
 
-.task-name{
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.task-manager {
+/* .task-manager {
     display: flex;
-}
+} */
 /* container for task output */
 .task-list-container, .completed-tasks-container {
-    /* flex: 1; */
     padding: 20px;
     background-color: rgb(202, 185, 227);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     margin: 20px 70px; 
-    min-width:300px;
-    min-height:300px;
+    width:100vh;
+    min-height:100px;
     transition: box-shadow 0.3s ease-in-out;
 }
 
 .completed-tasks-container{
+    width: 40vh;
     background-color: rgb(255, 105, 98);
 }
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    background-color: rgb(177, 156, 216);
+    padding-right: 100px;
+}
+
+
     
 .completed-tasks-container :not(h2) :not(.restore-button i) {
     text-decoration: line-through;
 }
 
+.task-item-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .task-item-container:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -101,14 +114,17 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
    
 }
+.task-name{
+    
+}
 /* output text */
 .task-item {
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 18px;
     font-weight: 500;
     width: 100%;
     padding: 10px;
-    text-decoration: none;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
 } 
 
 .edit-button, .completed-button, .delete-button, .restore-button{
@@ -116,7 +132,7 @@ body {
     cursor: pointer;
     border: none;
     border-radius: 10px;
-    font-size: 16/px; 
+    font-size: 16px; 
     background-color: white;
     color: #fff;
 }
@@ -135,3 +151,6 @@ h1{
     justify-content: center;
 }
 
+.completed-tasks-container {
+    display: none;
+}

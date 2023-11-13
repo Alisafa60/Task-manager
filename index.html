@@ -28,16 +28,23 @@
                     <option value="high">High</option>
                 </select>
                 <button id="addButton">Add</button>
+                <button id="toggleCompletedTasks">Toggle Completed Tasks</button>
             </form>
 
             <div class="task-manager">
                 <div class="task-list-container">
                     <h2>To-do List</h2>
+                    <div class="header-row">
+                        <span>Task Name</span>
+                        <span>Due Date</span>
+                        <span>Priority</span>
+                        <span>Actions</span>
+                    </div>
                     <ul id="taskList">
                         <!-- Tasks will be added here using JavaScript -->
                     </ul>
                 </div>
-    
+               
                 <div class="completed-tasks-container">
                     <h2>Completed Tasks</h2>
                     <ul id="completedTaskList">
@@ -46,6 +53,7 @@
                 </div>
             </div>
         </div>
+
         
         <script src="./script/script.js"></script>
     </body>

@@ -26,14 +26,13 @@ taskForm.addEventListener("submit", function(e) {
         taskItem.classList.add("task-item"); 
         taskItem.innerHTML = `
         <div class="task-item-container">
-            <div><span class="task-item task-name">${taskName}</span><div>
-            <div><span class="task-item task-date">Due Dute: ${formattedDueDate}</span><div>
-            <div><span class="task-item task-priority">Prioirty: ${priority}</span><div>
-            <div class="button-container">    
-                <button class="edit-button"><i class="fas fa-edit" style="color: #b19cd8;"></i></button>
-                <button class= "completed-button"><i class="fas fa-tasks" style="color: #b19cd9;"></i></button>
-                <button class= "delete-button"><i class="fas fa-trash-alt" style="color: #b19cd8;"></i></button>
-            </div>
+            <span class="task-item task-name">${taskName}</span>
+            <span class="task-item task-date"> ${formattedDueDate}</span>
+            <span class="task-item task-priority"> ${priority}</span>   
+            <button class="button-container edit-button"><i class="fas fa-edit" style="color: #b19cd8;"></i></button>
+            <button class= "button-container completed-button"><i class="fas fa-tasks" style="color: #b19cd9;"></i></button>
+            <button class= "button-container delete-button"><i class="fas fa-trash-alt" style="color: #b19cd8;"></i></button>
+            
         </div>
         `;
         taskList.appendChild(taskItem);
@@ -140,3 +139,19 @@ function restoreCompletedTask(completedTaskItem, taskText) {
     taskList.appendChild(taskItem);
     completedTaskItem.remove();
 }
+
+const toggleButton = document.getElementById("toggleCompletedTasks");
+toggleButton.addEventListener("click", function () {
+    const taskListContainer = document.querySelector(".task-list-container");
+    const completedTasksContainer = document.querySelector(".completed-tasks-container");
+
+    if (taskListContainer.style.display === "none") {
+        // Show task list and hide completed tasks
+        taskListContainer.style.display = "block";
+        completedTasksContainer.style.display = "none";
+    } else {
+        // Hide task list and show completed tasks
+        taskListContainer.style.display = "none";
+        completedTasksContainer.style.display = "block";
+    }
+});
