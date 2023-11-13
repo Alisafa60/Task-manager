@@ -28,6 +28,7 @@ body {
 }
 
 #taskName,
+#toggleCompletedTasks,
 #dueDate,
 #priority {
     margin: 5px 0;
@@ -35,13 +36,14 @@ body {
     font-size: 16px;
     background-color: rgb(171, 236, 184);
     border-radius: 10px;
-    width: 200px;
+    width: 220px;
 }
 #taskName{
     margin-top: 30px;
 }
 
-#addButton {
+#addButton,
+#toggleCompletedTasks {
     background-color: rgb(171, 236, 184); 
     color: white; 
     padding: 10px 20px; 
@@ -49,18 +51,18 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
     border-radius: 5px; 
-    margin-bottom: 30px;
+    
 }
 
-#addButton:hover {
+#addButton:hover, 
+#toggleCompletedTasks:hover {
     background-color: rgb(119, 221, 120); 
 }
 
-/* .task-manager {
-    display: flex;
-} */
+
 /* container for task output */
 .task-list-container, .completed-tasks-container {
     padding: 20px;
@@ -74,7 +76,6 @@ body {
 }
 
 .completed-tasks-container{
-    width: 40vh;
     background-color: rgb(255, 105, 98);
 }
 
@@ -114,9 +115,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
    
 }
-.task-name{
-    
-}
+
 /* output text */
 .task-item {
     font-size: 18px;
