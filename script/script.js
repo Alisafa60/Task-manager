@@ -113,30 +113,30 @@ document.addEventListener("DOMContentLoaded", function () {
     body.style.backgroundImage = `url('${imagePath}')`;
 });
 
-// completedTaskContainer.addEventListener("click", function (e) {
-//     const target = e.target;
-//     if (target.classList.contains("restore-button")) {
-//         // Restore completed task
-//         const completedTaskItem = target.closest(".completed-task-item");
-//         const taskText = completedTaskItem.querySelector(".task-name").innerText;
-//         restoreCompletedTask(completedTaskItem, taskText);
-//     }
-// });
+completedTaskContainer.addEventListener("click", function (e) {
+    const target = e.target;
+    if (target.classList.contains("restore-button")) {
+        // Restore completed task
+        const completedTaskItem = target.closest(".completed-task-item");
+        const taskText = completedTaskItem.querySelector(".task-name").innerText;
+        restoreCompletedTask(completedTaskItem, taskText);
+    }
+});
 
 
-// function restoreCompletedTask(completedTaskItem, taskText) {
-//     const taskItem = document.createElement('li');
-//     taskItem.classList.add("task-item");
-//     taskItem.innerHTML = `
-//         <div class="task-item-container">
-//             <span class="task-item task-name">${taskText}</span>
-//             <span class="task-item task-date">Completed</span>
-//             <div class="button-container">
-//                 <button class="edit-button"><i class="fas fa-edit" style="color: #b19cd8;"></i></button>
-//                 <button class="delete-button"><i class="fas fa-trash-alt" style="color: #b19cd8;"></i></button>
-//             </div>
-//         </div>
-//     `;
-//     completedTaskContainer.appendChild(taskItem);
-//     completedTaskItem.remove();
-// }
+function restoreCompletedTask(completedTaskItem, taskText) {
+    const taskItem = document.createElement('li');
+    taskItem.classList.add("task-item");
+    taskItem.innerHTML = `
+        <div class="task-item-container">
+            <span class="task-item task-name">${taskText}</span>
+            <span class="task-item task-date">Completed</span>
+            <div class="button-container">
+                <button class="edit-button"><i class="fas fa-edit" style="color: #b19cd8;"></i></button>
+                <button class="delete-button"><i class="fas fa-trash-alt" style="color: #b19cd8;"></i></button>
+            </div>
+        </div>
+    `;
+    taskList.appendChild(taskItem);
+    completedTaskItem.remove();
+}
