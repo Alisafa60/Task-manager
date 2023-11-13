@@ -68,7 +68,7 @@ body {
 }
 /* container for task output */
 .task-list-container, .completed-tasks-container {
-    flex: 1;
+    /* flex: 1; */
     padding: 20px;
     background-color: rgb(202, 185, 227);
     border-radius: 8px;
@@ -83,7 +83,7 @@ body {
     background-color: rgb(255, 105, 98);
 }
     
-.completed-tasks-container :not(h2) {
+.completed-tasks-container :not(h2) :not(.restore-button i) {
     text-decoration: line-through;
 }
 
@@ -111,21 +111,22 @@ body {
     text-decoration: none;
 } 
 
-.edit-button, .completed-button, .delete-button {
+.edit-button, .completed-button, .delete-button, .restore-button{
     padding: 10px 16px; 
     cursor: pointer;
     border: none;
     border-radius: 10px;
-    font-size: 18px; 
+    font-size: 14px; 
     background-color: white;
     color: #fff;
 }
 /* icons */
-.edit-button i, .completed-button i, .delete-button i {
+.edit-button i, .completed-button i, .delete-button i .restore-button i{
     font-size: 14px;
+    text-decoration: none;
 }
 
-.edit-button:hover, .completed-button:hover, .delete-button:hover {
+.edit-button:hover, .completed-button:hover, .delete-button:hover .resote-button:hover{
     background-color: rgb(202, 185, 227);
 }
 
